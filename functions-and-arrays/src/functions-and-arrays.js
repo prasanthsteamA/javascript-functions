@@ -1,18 +1,73 @@
 // Progression #1: Greatest of the two numbers
+function greatestOfTwoNumbers(num1,num2){
+  return Math.max(num1,num2);
+}
 
 // Progression #2: The lengthy word
 const words = ['mystery', 'brother', 'aviator', 'crocodile', 'pearl', 'orchard', 'crackpot'];
+function findScaryWord(words){
+  switch(words.length){
+    case 0:
+      return null;
+   case 1:
+      return words[0];
+    default:
+      let longword=words[0];
+      for(let i = 1; i < words.length; i++){
+        if(words[i].length>longword.length){
+            longword=words[i];
+        }
+        if (words.length == longword.length){
+            longword=words;
+        }
+      }
+      return longword;
+  }
+}
 
 // Progression #3: Net Price
 const numbers = [6, 12, 1, 18, 13, 16, 2, 1, 8, 10];
+function netPrice(numbers){
+  if (numbers.length==0){
+    return 0;
+  }
+  return numbers.reduce((sum,num)=>sum+num, 0);
+}
+function add(arr) {
+  if (arr.length==0){
+    return 0;
+  }
+  if(arr.length==1){
+    return arr[0];
+  }
+}
+
+
+
 
 // Progression #4: Calculate the average
 // Progression 4.1: Array of numbers
 const numbersAvg = [2, 6, 9, 10, 7, 4, 1, 9];
+function midPointOfLevels(numbers){
+  if(numbers.length==0){
+    return null;
+  }
+  return (numbers.reduce((sum,num)=>sum+num, 0))/numbers.length;
+}
 
 // Progression 4.2: Array of strings
 const wordsArr = ['seat', 'correspond', 'linen', 'motif', 'hole', 'smell', 'smart', 'chaos', 'fuel', 'palace'];
-
+function averageWordLength(words){
+  if(words.length==0){
+    return null;
+  }
+  return (words.reduce((sum,word)=>sum+word.length,0))/words.length;
+}
+function avg(words){
+  if(words.length==0){
+    return null;
+  }
+}
 // Progression #5: Unique arrays
 const wordsUnique = [
   'bread',
@@ -28,9 +83,25 @@ const wordsUnique = [
   'egg',
   'flour'
 ];
-
+function uniquifyArray(arr){
+  if(arr.length==0){
+    return null;
+  }
+  
+  
+}
 // Progression #6: Find elements
 const wordsFind = ['machine', 'subset', 'trouble', 'starting', 'matter', 'eating', 'truth', 'disobedience'];
+function searchElement(arr,target){
+  switch(true){
+    case arr.length==0:
+      return null;
+    case arr.includes(target):
+      return true;
+    default:
+      return false;
+  }
+}
 
 // Progression #7: Count repetition
 const wordsCount = [
@@ -46,6 +117,12 @@ const wordsCount = [
   'disobedience',
   'matter'
 ];
+function howManyTimesElementRepeated(arr,target){
+  if(arr.length==0){
+    return 0;
+  }
+  return arr.filter(word=>word==target).length;
+}
 
 // Progression #8: Bonus
 
@@ -61,3 +138,6 @@ const matrix = [
   [24, 55, 58, 05, 66, 73, 99, 26, 97, 17],
   [21, 36, 23, 09, 75, 00, 76, 44, 20, 45]
 ];
+function maximumProduct(arr){
+ 
+}

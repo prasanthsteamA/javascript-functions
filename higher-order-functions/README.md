@@ -35,6 +35,8 @@ Create a new array named as `modifiedFood` and also create a `slice()` method.Th
 
 ```
 Expected output: [burger, fingerShips, donuts]
+
+
 ```
 
 

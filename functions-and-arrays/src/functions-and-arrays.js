@@ -185,18 +185,4 @@ function maximumProduct(array) {
     }
   }
 }
-//slice
 
-const foods = ["pizza", "burger", "fingerChips", "donuts", "springRoll"];
-
-let modifiedFood = foods.slice(1, 4);
-
-console.log(modifiedFood);
-
-//splice
-
-modifiedFood = foods.splice(2);
-
-console.log(modifiedFood);
-
-//
